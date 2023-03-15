@@ -23,7 +23,6 @@ apps:
       - home
       - audio-playback
       - alsa
-      - gsettings
       - pulseaudio
       - bluez
       - bluetooth-control
