@@ -19,6 +19,7 @@ apps:
      - kde-neon
     common-id: org.community.audacious-qt        
     plugs:
+      - kde-frameworks-5-plug
       - home
       - audio-playback
       - alsa
