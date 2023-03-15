@@ -1,9 +1,9 @@
-name: audacious-snap
-base: core22
-adopt-info: audacious-snap
+name: audacious-qt
+base: core20
+adopt-info: audacious-qt
 summary: Lightweight Open Source Music player
 description: |
-  Audacious is a Lightweight Gtk + Music Player.
+  Audacious is a Lightweight Qt Music Player.
 grade: stable
 confinement: strict
 compression: lzo
@@ -13,12 +13,11 @@ architectures:
     build-for: amd64
                 
 apps:
-  audacious-snap:
+  audacious-qt:
     command: usr/bin/audacious
-    extensions: [gnome]
-    common-id: org.community.audacious
-    environment:
-            GTK_USE_PORTAL: 1
+    extensions:
+     - kde-neon
+    common-id: org.community.audacious-qt        
     plugs:
       - home
       - audio-playback
@@ -42,7 +41,7 @@ apps:
  
       
 parts:
-  audacious-snap:
+  audacious-qt:
     source: https://github.com/audacious-media-player/audacious.git
     plugin: nil
     build-packages:
@@ -59,18 +58,18 @@ parts:
       
     
     override-pull: |
-      craftctl default
-      craftctl set version=$(git describe --tags)
+      snapcraftctl pull
+      snapcraftctl set version=$(git describe --tags)
       git clone https://github.com/audacious-media-player/audacious.git audacious
      
    
     override-build: |
-      craftctl default
+      snapcraftctl build
       cd audacious
       ./autogen.sh
-      ./configure --enable-gtk3 --disable-qt --disable-dbus --with-buildstamp='Snapcraft' --prefix=/usr
-      make -j$CRAFT_PARALLEL_BUILD_COUNT PREFIX=/usr
-      make PREFIX=/usr DESTDIR=${CRAFT_PART_INSTALL} install
+      ./configure --disable-gtk --enable-qt --disable-dbus --with-buildstamp='Snapcraft' --prefix=/usr
+      make -j$SNAPCRAFT_PARALLEL_BUILD_COUNT PREFIX=/usr
+      make PREFIX=/usr DESTDIR=${SNAPCRAFT_PART_INSTALL} install
       make clean  
     
     stage-packages:
@@ -188,16 +187,16 @@ parts:
       - libaudcore5
       
     override-pull: |
-      craftctl default
+      snapcraftctl pull
       git clone https://github.com/audacious-media-player/audacious-plugins.git audacious-plugins
       
     override-build: |
-      craftctl default
+      snapcraftctl build
       cd audacious-plugins
       ./autogen.sh
-      ./configure --enable-gtk3 --disable-qt --prefix=/usr
-      make -j$CRAFT_PARALLEL_BUILD_COUNT PREFIX=/usr
-      make PREFIX=/usr DESTDIR=${CRAFT_PART_INSTALL} install
+      ./configure --disable-gtk --enable-qt --prefix=/usr
+      make -j$SNAPCRAFT_PARALLEL_BUILD_COUNT PREFIX=/usr
+      make PREFIX=/usr DESTDIR=${SNAPCRAFT_PART_INSTALL} install
       make clean  
       
    
