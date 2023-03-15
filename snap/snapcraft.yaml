@@ -22,19 +22,13 @@ apps:
       - kde-frameworks-5-plug
       - home
       - audio-playback
-      - alsa
       - pulseaudio
-      - bluez
       - bluetooth-control
       - media-control
       - network-status
-      - network
-      - network-bind
-      - raw-usb
       - optical-drive
       - network-status
       - removable-media
-      - unity7
       - screen-inhibit-control
       
  
