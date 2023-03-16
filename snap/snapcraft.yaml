@@ -69,6 +69,7 @@ parts:
     build-packages:
       - curl
       - build-essential
+      - meson
       - make
       - git
       - autotools-dev
@@ -128,6 +129,7 @@ parts:
       - curl
       - build-essential
       - make
+      - meson
       - git
       - autotools-dev
       - automake
