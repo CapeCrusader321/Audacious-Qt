@@ -133,6 +133,9 @@ parts:
       - libglib2.0-dev
       - libglib2.0-dev-bin
       - libglib2.0-0
+      - libkf5doctools-dev
+      - libphonon4qt5-dev
+      - libphonon4qt5experimental-dev
       - autoconf
       - autopoint
       - libtool
@@ -214,7 +217,7 @@ parts:
       - pulseaudio-module-lirc
       - lirc-x
       - lirc-drv-irman
-      - libaudcore5
+
       
    
     
