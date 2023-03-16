@@ -52,6 +52,15 @@ parts:
     plugin: meson
     meson-parameters:
        - --prefix=/usr
+       - --Dgtk=false
+       - --Dgtk3=false
+       - --Dqt5=true
+       - --Dqt6=false
+       - --Ddbus=false
+       
+       
+       
+       - --prefix=/usr
        - --disable-gtk
        - --enable-qt
        - --disable-dbus
