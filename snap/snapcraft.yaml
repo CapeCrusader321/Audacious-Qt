@@ -21,9 +21,8 @@ apps:
     command: usr/bin/audacious
     extensions:
     - kde-neon
-    common-id: org.community.audacious
-    #environment:
-            #GTK_USE_PORTAL: 1
+    common-id: org.community.audacious-qt
+    
     plugs:
       - home
       - audio-playback
@@ -53,7 +52,7 @@ parts:
     autotools-configure-parameters: 
        - --prefix=/usr
        - --disable-gtk
-       - --enable-qt5
+       - --enable-qt
        - --disable-dbus
        - --with-buildstamp='Snapcraft'
        
@@ -122,7 +121,7 @@ parts:
     autotools-configure-parameters:
        - --prefix=/usr
        - --disable-gtk
-       - --enable-qt5
+       - --enable-qt
        
     build-snaps:
       - kf5-5-104-qt-5-15-8-core22-sdk
