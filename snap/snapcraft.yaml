@@ -49,8 +49,8 @@ apps:
 parts:
   audacious-qt:
     source: https://github.com/audacious-media-player/audacious.git
-    plugin: autotools
-    autotools-configure-parameters:
+    plugin: meson
+    meson-parameters:
        - --prefix=/usr
        - --disable-gtk
        - --enable-qt
@@ -113,8 +113,8 @@ parts:
   audacious-plugins:
     after: [audacious-qt]
     source: https://github.com/audacious-media-player/audacious-plugins.git 
-    plugin: autotools
-    autotools-configure-parameters:
+    plugin: meson
+    meson-parameters:
        - --prefix=/usr
        - --disable-gtk
        - --enable-qt
