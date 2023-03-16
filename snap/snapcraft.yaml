@@ -49,20 +49,11 @@ apps:
 parts:
   audacious-qt:
     source: https://github.com/audacious-media-player/audacious.git
-    plugin: meson
-    meson-parameters:
-       - --prefix=/usr
-       - --gtk=false
-       - --gtk3=false
-       - --qt5=true
-       - --qt6=false
-       - --dbus=false
-       
-       
-       
+    plugin: autotools
+    autotools-configure-parameters: 
        - --prefix=/usr
        - --disable-gtk
-       - --enable-qt
+       - --enable-qt5
        - --disable-dbus
        - --with-buildstamp='Snapcraft'
        
@@ -78,7 +69,6 @@ parts:
     build-packages:
       - curl
       - build-essential
-      - meson
       - make
       - git
       - autotools-dev
@@ -123,11 +113,11 @@ parts:
   audacious-plugins:
     after: [audacious-qt]
     source: https://github.com/audacious-media-player/audacious-plugins.git 
-    plugin: meson
-    meson-parameters:
+    plugin: autotools
+    autotools-configure-parameters:
        - --prefix=/usr
        - --disable-gtk
-       - --enable-qt
+       - --enable-qt5
        
     build-snaps:
       - kf5-5-104-qt-5-15-8-core22-sdk
@@ -138,7 +128,6 @@ parts:
       - curl
       - build-essential
       - make
-      - meson
       - git
       - autotools-dev
       - automake
