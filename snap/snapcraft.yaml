@@ -62,7 +62,10 @@ parts:
       craftctl set version=$(git describe --tags)
       
     build-snaps:
-      - kf5-5-104-qt-5-15-8-core22-sdk   
+      - kf5-5-104-qt-5-15-8-core22-sdk
+      - cmake
+      - ubuntu-make
+      
     build-packages:
       - curl
       - build-essential
@@ -116,7 +119,9 @@ parts:
        - --enable-qt
        
     build-snaps:
-      - kf5-5-104-qt-5-15-8-core22-sdk    
+      - kf5-5-104-qt-5-15-8-core22-sdk
+      - cmake
+      - ubuntu-make
     
     build-packages:
       - curl
