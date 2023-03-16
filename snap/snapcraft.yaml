@@ -76,6 +76,7 @@ parts:
       - autoconf
       - autopoint
       - libtool
+      - libjson-glib-dev
       - libtool-bin
       - libkf5doctools-dev
       - libphonon4qt5-dev
@@ -197,6 +198,7 @@ parts:
       - libmms0
       - libmms-dev
       - faac
+      - libjson-glib-dev
       - aac-enc
       - libavcodec-extra
       - libavformat-extra
