@@ -78,6 +78,7 @@ parts:
       - libphonon4qt5-dev
       - libphonon4qt5experimental-dev
       - libglib2.0-dev
+      - libglib2.0-dev-bin
 
           
     stage-packages:
@@ -124,6 +125,7 @@ parts:
       - autotools-dev
       - automake
       - libglib2.0-dev
+      - libglib2.0-dev-bin
       - autoconf
       - autopoint
       - libtool
