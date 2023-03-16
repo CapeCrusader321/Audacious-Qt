@@ -52,11 +52,11 @@ parts:
     plugin: meson
     meson-parameters:
        - --prefix=/usr
-       - --Dgtk=false
-       - --Dgtk3=false
-       - --Dqt5=true
-       - --Dqt6=false
-       - --Ddbus=false
+       - --gtk=false
+       - --gtk3=false
+       - --qt5=true
+       - --qt6=false
+       - --dbus=false
        
        
        
