@@ -93,7 +93,7 @@ parts:
       - libsdl2-2.0-0
       - libxss1
       - libdecor-0-0
-      - libfluidsynth3
+      - libfluidsynth2
       - libinstpatch-1.0-2
       - libcddb2
       - libcdio19
@@ -169,7 +169,7 @@ parts:
       - libflac8
       - fluidsynth
       - libfluidsynth-dev
-      - libfluidsynth3
+      - libfluidsynth2
       - libmpg123-0
       - libmpg123-dev
       - wavpack
