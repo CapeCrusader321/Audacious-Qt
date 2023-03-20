@@ -139,7 +139,7 @@ parts:
       - autopoint
       - libtool
       - libtool-bin    
-      - libcdio19
+      - libcdio18
       - libcdio-utils
       - libcdio-dev
       - libcdio-cdda2
@@ -211,7 +211,6 @@ parts:
       - liblirc-client0
       - liblirc0
       - liblirc-dev
-      - liblirc0
       - pulseaudio-module-lirc
       - lirc-x
       - lirc-drv-irman
