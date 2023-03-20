@@ -99,7 +99,7 @@ parts:
       - libcdio19
       - libcdio-cdda2
       - libopusfile0
-      - libpipewire-0.3-0
+      - libpipewire-0.2-1
       - libsndio7.0
       - libmms0
       - libneon27
