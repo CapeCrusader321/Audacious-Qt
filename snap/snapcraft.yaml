@@ -58,10 +58,9 @@ parts:
        
     override-pull: |
       craftctl default
-      craftctl set version=$(git describe --tags)
+       craftctl set version=$(git describe --tags --abbrev=0)
       
     build-snaps:
-      - kf5-5-104-qt-5-15-8-core22-sdk
       - cmake
       - ubuntu-make
       
@@ -121,7 +120,6 @@ parts:
        - --enable-qt
        
     build-snaps:
-      - kf5-5-104-qt-5-15-8-core22-sdk
       - cmake
       - ubuntu-make
     
