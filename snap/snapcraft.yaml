@@ -1,5 +1,5 @@
 name: audacious-qt
-base: core22
+base: core20
 adopt-info: audacious-qt
 summary: Lightweight Open Source Qt based Music player
 description: |
@@ -10,7 +10,7 @@ compression: lzo
 
 architectures:
   - build-on: amd64
-    build-for: amd64
+    run-on: amd64
     
 layout:
   /usr/lib/audacious:
@@ -21,7 +21,6 @@ apps:
     command: usr/bin/audacious
     extensions: [gnome]
     common-id: org.community.audacious-qt
-    
     plugs:
       - home
       - audio-playback
@@ -56,12 +55,13 @@ parts:
        - --with-buildstamp='Snapcraft'
        
     override-pull: |
-      craftctl default
-       craftctl set version=$(git describe --tags --abbrev=0)
+       snapcraftctl pull
+       snapcraftctl set-version=$(git describe --tags --abbrev=0)
       
     build-snaps:
       - cmake
       - ubuntu-make
+      - kde-frameworks-5-99-qt-5-15-7-core20-sdk
       
     build-packages:
       - curl
@@ -106,7 +106,7 @@ parts:
       - libneon27
      
     override-stage: |
-      craftctl default
+      snapcraftctl stage
       sed -i -e '/^plugin_dir=/s/\${exec_prefix}/\/usr/' usr/lib/pkgconfig/audacious.pc  
        
   audacious-plugins:
@@ -121,6 +121,7 @@ parts:
     build-snaps:
       - cmake
       - ubuntu-make
+      - kde-frameworks-5-99-qt-5-15-7-core20-sdk
     
     build-packages:
       - curl
