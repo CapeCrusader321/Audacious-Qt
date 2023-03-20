@@ -19,8 +19,7 @@ layout:
 apps:
   audacious-qt:
     command: usr/bin/audacious
-    extensions:
-    - kde-neon
+    extensions: [gnome]
     common-id: org.community.audacious-qt
     
     plugs:
