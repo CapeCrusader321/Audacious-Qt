@@ -88,7 +88,7 @@ parts:
       - libcue2
       - liblirc-client0
       - liblirc0
-      - libadplug-2.3.3-0
+      - libadplug-2.3.1-0
       - libbinio1v5
       - libsdl2-2.0-0
       - libxss1
@@ -146,7 +146,7 @@ parts:
       - libcdio-cdda-dev
       - libcddb2
       - libcddb2-dev
-      - libadplug-2.3.3-0
+      - libadplug-2.3.1-0
       - libadplug-dev
       - adplug-utils
       - oggfwd
