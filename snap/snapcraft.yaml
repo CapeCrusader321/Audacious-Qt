@@ -144,8 +144,6 @@ parts:
       - libcdio-dev
       - libcdio-cdda2
       - libcdio-cdda-dev
-      - libcdio++-dev
-      - libcdio++1
       - libcddb2
       - libcddb2-dev
       - libadplug-2.3.3-0
