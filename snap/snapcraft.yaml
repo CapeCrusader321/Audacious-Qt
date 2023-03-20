@@ -190,7 +190,7 @@ parts:
       - libjson-glib-dev
       - aac-enc
       - libavcodec-extra
-      - libavformat-extra
+      - libavformat58
       - libavutil56
       - libmodplug1
       - libopenmpt0
