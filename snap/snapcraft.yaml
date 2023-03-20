@@ -195,7 +195,7 @@ parts:
       - libmodplug1
       - libopenmpt0
       - libopenmpt-modplug1
-      - libsidplayfp6
+      - libsidplayfp4
       - libbs2b0
       - libsamplerate0
       - libsoxr0
