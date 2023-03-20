@@ -95,7 +95,7 @@ parts:
       - libfluidsynth2
       - libinstpatch-1.0-2
       - libcddb2
-      - libcdio19
+      - libcdio18
       - libcdio-cdda2
       - libopusfile0
       - libpipewire-0.2-1
