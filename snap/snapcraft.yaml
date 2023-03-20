@@ -55,7 +55,7 @@ parts:
        
     override-pull: |
        snapcraftctl pull
-       snapcraftctl set-version=$(git describe --tags --abbrev=0)
+       snapcraftctl set-version $(git describe --tags --abbrev=0)
       
     build-snaps:
       - cmake
