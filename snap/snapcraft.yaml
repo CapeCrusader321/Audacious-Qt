@@ -19,18 +19,17 @@ layout:
 apps:
   audacious-qt:
     command: usr/bin/audacious
-    extensions: [gnome]
+    extensions:
+      - kde-neon 
     common-id: org.community.audacious-qt
     plugs:
       - home
       - audio-playback
       - alsa
-      - gsettings
       - pulseaudio
       - bluez
       - bluetooth-control
       - media-control
-      - network-status
       - network
       - network-bind
       - raw-usb
