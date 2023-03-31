@@ -85,8 +85,8 @@ parts:
 
           
     stage-packages:
+      - liblirc-client0
       - libcue2
-      - liblirc-client
       - liblirc0
       - libadplug-2.3.3-0
       - libbinio1v5
