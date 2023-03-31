@@ -55,7 +55,7 @@ parts:
        
     override-pull: |
        craftctl default
-       craftctl set-version $(git describe --tags --abbrev=0)
+       craftctl set version=$(git describe --tags --abbrev=0)
       
     build-snaps:
       - cmake
