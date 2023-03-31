@@ -59,6 +59,7 @@ parts:
       
     build-snaps:
       - cmake
+      - gnome-42-2204
       - ubuntu-make
       - kf5-5-104-qt-5-15-8-core22-sdk
       
@@ -121,6 +122,7 @@ parts:
       - cmake
       - ubuntu-make
       - kf5-5-104-qt-5-15-8-core22-sdk
+      - gnome-42-2204
  
     build-packages:
       - curl
