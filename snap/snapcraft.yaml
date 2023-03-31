@@ -45,8 +45,8 @@ apps:
 parts:
   audacious-qt:
     source: https://github.com/audacious-media-player/audacious.git
-    plugin: autotools
-    autotools-configure-parameters: 
+    plugin: make
+    make-parameters: 
        - --prefix=/usr
        - --disable-gtk
        - --enable-qt
@@ -59,7 +59,6 @@ parts:
       
     build-snaps:
       - cmake
-      - gnome-42-2204
       - ubuntu-make
       - kf5-5-104-qt-5-15-8-core22-sdk
       
@@ -68,6 +67,8 @@ parts:
       - build-essential
       - make
       - git
+      - libglib2.0-0
+      - libglib2.0-dev
       - autotools-dev
       - automake
       - autoconf
@@ -122,13 +123,15 @@ parts:
       - cmake
       - ubuntu-make
       - kf5-5-104-qt-5-15-8-core22-sdk
-      - gnome-42-2204
+     
  
     build-packages:
       - curl
       - build-essential
       - make
       - git
+      - libglib2.0-dev
+      - libglib2.0-0
       - autotools-dev
       - automake
       - autoconf
