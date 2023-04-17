@@ -58,21 +58,9 @@ parts:
        craftctl set version=$(git describe --tags --abbrev=0)
       
     build-snaps:
-      - cmake
-      - ubuntu-make
       - kf5-5-104-qt-5-15-8-core22-sdk
       
     build-packages:
-      - curl
-      - build-essential
-      - make
-      - git
-      - libglib2.0-0
-      - libglib2.0-dev
-      - autotools-dev
-      - automake
-      - autoconf
-      - autopoint
       - libtool
       - libkf5doctools-dev
       - libphonon4qt5-dev
@@ -194,8 +182,6 @@ parts:
       - ffmpeg
       - libmms0
       - libmms-dev
-      - faac
-      - aac-enc
       - libavcodec-extra
       - libavformat-extra
       - libavutil56
