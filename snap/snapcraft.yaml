@@ -45,8 +45,8 @@ apps:
 parts:
   audacious-qt:
     source: https://github.com/audacious-media-player/audacious.git
-    plugin: autotools
-    autotools-configure-parameters: 
+    plugin: make
+    make-parameters: 
        - --prefix=/usr
        - --disable-gtk
        - --enable-qt
