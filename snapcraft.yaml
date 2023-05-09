@@ -1,6 +1,6 @@
 name: audacious-qt
 base: core22
-adopt-info: audacious
+adopt-info: audacious-qt
 summary: Lightweight Open Source Music player
 description: |
   Audacious is a Lightweight Qt Music Player.
