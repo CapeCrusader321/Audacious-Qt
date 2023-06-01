@@ -9,8 +9,7 @@ confinement: strict
 compression: lzo
 architectures:
   - build-on: amd64
-  - build-on: armhf
-  - build-on: arm64
+  
 layout:
   /usr/lib/audacious:
     symlink: $SNAP/usr/lib/audacious
