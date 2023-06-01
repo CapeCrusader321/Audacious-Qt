@@ -103,8 +103,6 @@ parts:
        - --disable-gtk
        - --enable-qt
        - --enable-aac
-    build-snaps:
-      - kf5-5-105-qt-5-15-9-core22-sdk
     build-packages:
       - curl
       - build-essential
@@ -193,7 +191,6 @@ parts:
     # that conflict with the Gnome extension
     plugin: autotools
     source: https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz
-    after: [lib-fdk]
     source-checksum: sha256/57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082
     autotools-configure-parameters:
       # WORKAROUND: Install to /usr instead of /usr/local because it's not in search paths
@@ -229,19 +226,7 @@ parts:
       - libaom3
     stage:
       - -usr/include 
-    
-  lib-fdk:
-    plugin: autotools
-    source: https://github.com/mstorsjo/fdk-aac.git
-    build-packages:
-      - git
-      - build-essential
-      - libtool
-      - autoconf
-      - automake
-     
   
- 
       
       
       
