@@ -42,9 +42,6 @@ parts:
   audacious-qt:
     source: https://github.com/audacious-media-player/audacious.git
     after: [ffmpeg]
-    build-environment:
-       - PKG_CONFIG_PATH: $PKG_CONFIG_PATH:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET/pkgconfig:$CRAFT_STAGE/usr/lib/pkgconfig:$CRAFT_STAGE/usr/share/pkgconfig
-       - PKG_CONFIG_LIBDIR: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/5-102-qt-5-15-8-core22-sd/current/usr/lib:/snap/5-102-qt-5-15-8-core22-sd/current/usr/lib/$CRAFT_ARCH_TRIPLET
     plugin: autotools
     autotools-configure-parameters:
        - --prefix=/usr
@@ -95,9 +92,6 @@ parts:
     after: [audacious-qt]
     source: https://github.com/audacious-media-player/audacious-plugins.git 
     plugin: autotools
-    build-environment:
-       - PKG_CONFIG_PATH: $PKG_CONFIG_PATH:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET/pkgconfig:$CRAFT_STAGE/usr/lib/pkgconfig:$CRAFT_STAGE/usr/share/pkgconfig
-       - PKG_CONFIG_LIBDIR: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/5-102-qt-5-15-8-core22-sd/current/usr/lib:/snap/5-102-qt-5-15-8-core22-sd/current/usr/lib/$CRAFT_ARCH_TRIPLET
     autotools-configure-parameters:
        - --prefix=/usr
        - --disable-gtk
